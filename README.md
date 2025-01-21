@@ -34,7 +34,7 @@ sensor.detect("Temperature: 25°C")
 
 1. Clone the project:
    ```bash
-   git clone https://github.com/<your-username>/EDP-System.git
+   git clone https://github.com/0808doga/EDP-LECTURE-EXAM.git
    ```
 2. Go to the folder:
    ```bash
