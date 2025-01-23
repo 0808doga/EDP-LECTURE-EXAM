@@ -16,28 +16,41 @@ class EventEmitter:
                 listener(*args, **kwargs)
 
 
-
 class Sensor(EventEmitter):
     def detect(self, data):
         print(f"Sensor detected: {data}")
         self.emit("data_detected", data)
 
+
 class Processor(EventEmitter):
     def process(self, data):
-        print(f"Processor processed: {data}")
-        self.emit("data_processed", data)
+        if "error" in data.lower():
+            print(f"Processor encountered an error with: {data}")
+            self.emit("data_error", data)
+        else:
+            print(f"Processor processed: {data}")
+            self.emit("data_processed", data)
+
 
 class Logger(EventEmitter):
     def log(self, message):
         print(f"Logger logged: {message}")
 
 
+class Notifier(EventEmitter):
+    def notify(self, message):
+        print(f"Notifier sent notification: {message}")
+
+
 if __name__ == "__main__":
     sensor = Sensor()
     processor = Processor()
     logger = Logger()
+    notifier = Notifier()
 
     sensor.on("data_detected", processor.process)
     processor.on("data_processed", logger.log)
+    processor.on("data_error", notifier.notify)
 
     sensor.detect("Temperature: 25°C")
+    sensor.detect("Error: Sensor malfunction")
