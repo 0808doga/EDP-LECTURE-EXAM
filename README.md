@@ -1,6 +1,8 @@
 # EDP-LECTURE-EXAM
 
 # Event-Driven Programming (EDP) System
+## BLOG POST 
+(https://medium.com/@dogasimsekpoland/exploring-event-driven-programming-a-python-project-with-four-agents-b81022bf3ab2)
 
 ## What is EDP?
 
