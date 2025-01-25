@@ -1,8 +1,9 @@
 # EDP-LECTURE-EXAM
 
 # Event-Driven Programming (EDP) System
+
 ## BLOG POST 
-(https://medium.com/@dogasimsekpoland/exploring-event-driven-programming-a-python-project-with-four-agents-b81022bf3ab2)
+https://medium.com/@dogasimsekpoland/building-modular-systems-with-event-driven-programming-edp-7ac15b61cf38
 
 ## What is EDP?
 
@@ -24,28 +25,6 @@ This project is a simple Python example of EDP. It has four parts:
 - The Logger listens for processed data and logs it.
 - The UI listens for logged data and shows it to the user.
 
-### Example Code
-
-```python
-sensor.on("data_detected", processor.process)
-processor.on("data_processed", logger.log)
-sensor.detect("Temperature: 25°C")
-```
-
-## How to Run
-
-1. Clone the project:
-   ```bash
-   git clone https://github.com/0808doga/EDP-LECTURE-EXAM.git
-   ```
-2. Go to the folder:
-   ```bash
-   cd EDP-System
-   ```
-3. Run it:
-   ```bash
-   python src/main.py
-   ```
 
 ## Why Use EDP?
 
